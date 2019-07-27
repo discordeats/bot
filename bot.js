@@ -3,7 +3,7 @@ const client = new Discord.Client({ disableEveryone: true });
 const fs = require('fs');
 
 client.config = require('./config.json');
-client.db = require('rethinkdbdash')({ db: 'discordeats' });
+client.db = require('rethinkdbdash')({ db: 'discordeats', servers: [{ host: client.config.db.host, port: client.config.db.port, user: client.config.db.user, password: client.config.db.password }] });
 client.login(client.config.token);
 
 fs.readdir('events', (err, files) => {
