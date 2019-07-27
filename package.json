@@ -1,0 +1,24 @@
+{
+  "name": "discordeatsbot",
+  "version": "1.0.0",
+  "description": "The bot for DiscordEats",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/discordeats/bot.git"
+  },
+  "author": "Facto",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/discordeats/bot/issues"
+  },
+  "homepage": "https://github.com/discordeats/bot#readme",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "fs-readdir-recursive": "^1.1.0",
+    "rethinkdbdash": "^2.3.31"
+  }
+}
