@@ -24,7 +24,15 @@ module.exports = {
             } else if (m.first().content.toLowerCase() == 'cancel') return m.first().react('👌');
         } else proceed = true;
         if (proceed == true) {
-            const channel = await msg.guild.createChannel(`order-${await misc.intByOneInDB('tickets')}`, { type: 'text', parent: client.config.ordercat, permissionOverwrites: [{ deny: 'VIEW_CHANNEL', id: client.config.everyonerole }, { allow: 'VIEW_CHANNEL', id: client.config.employeerole }, { allow: 'VIEW_CHANNEL', id: msg.author.id }, { allow: 'VIEW_CHANNEL', id: client.user.id }] });
+            const channel = await msg.guild.createChannel(
+            `order-${await misc.intByOneInDB('tickets')}`, 
+            { type: 'text', parent: client.config.ordercat, permissionOverwrites: [
+                { deny: 'VIEW_CHANNEL', id: client.config.everyonerole },
+                { allow: 'VIEW_CHANNEL', id: client.config.employeerole }, 
+                { allow: 'VIEW_CHANNEL', id: msg.author.id }, 
+                { allow: 'VIEW_CHANNEL', id: client.user.id }
+            ]}
+            );
             await msg.guild.roles.get(client.config.employeerole).setMentionable(true);
             await channel.send(`<@&${client.config.employeerole}>\n\nThe employees that are online will get to your order. Please note that our hours of operation are **12PM** to **6PM EST**. If you've ordered before or after that, please cancel your order with \`!cancel\` in this channel.`);
             await msg.guild.roles.get(client.config.employeerole).setMentionable(false);
