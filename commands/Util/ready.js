@@ -3,6 +3,7 @@ module.exports = {
         msg.channel.send('Pong!');
     },
     meta: {
-        aliases: ['ping']
+        aliases: ['ping'],
+        permlvl: 0
     }
 }
