@@ -6,5 +6,8 @@
         "port":"",
         "user":"",
         "password":""
-    }
+    },
+    "ordercat":"",
+    "everyonerole":"",
+    "employeerole":""
 }
