@@ -34,7 +34,7 @@ module.exports = {
             ]}
             );
             await msg.guild.roles.get(client.config.employeerole).setMentionable(true);
-            await channel.send(`<@&${client.config.employeerole}>\n\nThe employees that are online will get to your order. Please note that our hours of operation are **12PM** to **6PM EST**. If you've ordered before or after that, please cancel your order with \`!cancel\` in this channel.`);
+            await channel.send(`<@&${client.config.employeerole}>\n\nThe employees that are online will get to your order. Please note that our hours of operation are **12PM** to **6PM EST**. If you've ordered before or after that, please cancel your order with \`!close\` in this channel.`);
             await msg.guild.roles.get(client.config.employeerole).setMentionable(false);
         }
     },

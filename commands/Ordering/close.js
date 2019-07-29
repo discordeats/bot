@@ -8,6 +8,6 @@ module.exports = {
     },
     meta: {
         permlvl: 0,
-        aliases: ['cancel']
+        aliases: ['close']
     }
 }
