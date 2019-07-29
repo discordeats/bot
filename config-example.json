@@ -9,5 +9,9 @@
     },
     "ordercat":"",
     "everyonerole":"",
-    "employeerole":""
+    "employeerole":"",
+    "api": {
+        "key":"",
+        "base":""
+    }
 }

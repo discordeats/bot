@@ -1,4 +1,4 @@
-const { Message } = require('discord.js');
+const { Message, User } = require('discord.js');
 const misc = {};
 
 /**
@@ -34,6 +34,19 @@ misc.intByOneInDB = async category => {
     const num2insert = num + 1;
     await client.db.table('numData').get(category).update({ number: num2insert }).run();
     return num;
+}
+
+/**
+ * @param {Message} msg
+ * @param {String} input
+ * @returns {User} the user it got
+ */
+misc.getUserFromMSG = (msg, input) => {
+    let user;
+    if (msg.mentions.users.size > 0) {
+        user = msg.mentions.users.first();
+    } else user = client.users.get(input);
+    return user;
 }
 
 module.exports = misc;
