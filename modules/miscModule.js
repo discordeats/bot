@@ -16,9 +16,9 @@ misc.elevation = msg => {
 
 misc.firstTimeMSG = [
     '**PLEASE READ**',
-    'Thank you for trying to place your first order, befor you continue pleae read this message so you can understand our service.',
+    'Thank you for trying to place your first order, before you continue please read this message so you can understand our service.',
     '',
-    'In the discord we have channels such as #tos, #rules, #information and #assistance. Please read all of those before continuning with your first order, this is for your safety and ours. We are not a scam nor are we looking to be one. If you want to see other people\'s reviews with our service, please check out #rate-out-service. And if you have any further questions, fel free to contact any staff members (Moderator, Employee, or Administrator).',
+    'In the discord we have channels such as #tos, #rules, #information and #assistance. Please read all of those before continuning with your first order, this is for your safety and ours. We are not a scam nor are we looking to be one. If you want to see other people\'s reviews with our service, please check out #rate-out-service. And if you have any further questions, feel free to contact any staff members (Moderator, Employee, or Administrator).',
     '',
     'If you\'ve completed all this and feel safe using our service, please send this bot the following message: "continue", otherwise you can send the bot "cancel" to cancel your order.'
 ].join('\n');

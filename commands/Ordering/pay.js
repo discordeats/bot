@@ -7,7 +7,10 @@ module.exports = {
         if (!args[1]) return msg.channel.send(':x: Please give a cost of the order!');
         const cost = parseInt(args[1], 10);
         const data4api = {
-            requestor: user.tag,
+            requestor: {
+                id: user.id,
+                tag: user.tag,
+            },
             cost: cost,
             channel: msg.channel.id
         }
