@@ -14,5 +14,7 @@
         "key":"",
         "base":""
     },
-    "tosmsg":""
+    "tosmsg":"",
+    "reviewqueue":"",
+    "reviewchannel":""
 }

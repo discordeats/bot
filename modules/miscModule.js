@@ -49,4 +49,41 @@ misc.getUserFromMSG = (msg, input) => {
     return user;
 }
 
+/**
+ * @returns {Number} the mean
+ */
+misc.getMeanStars = async () => {
+    const reviews = await client.db.table('orders').filter({ reviewed: true, review: { status: 'ACCEPTED' } }).run();
+    let stars = 0;
+    reviews.forEach(r => {
+        stars = r.review.rating + stars;
+    });
+    stars = stars / reviews.length;
+    return Math.round(stars);
+}
+
+/**
+ * @param {Number} mean
+ * @param {Object} review 
+ * @returns {String} the msg
+ */
+misc.reviewMSG = (mean, review) => {
+    let comments;
+    if (review.review.comments == 'None') {
+        comments = 'Nothing';
+    } else comments = review.review.comments;
+    const msg = [
+        '**Current Ratings for Our Service**',
+        '',
+        `${mean} stars`,
+        '',
+        '----',
+        '',
+        `**${review.requestor.tag} said:**`,
+        `${comments}`,
+        `${review.review.rating} stars`
+    ].join('\n');
+    return msg;
+}
+
 module.exports = misc;
