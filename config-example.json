@@ -16,5 +16,6 @@
     },
     "tosmsg":"",
     "reviewqueue":"",
-    "reviewchannel":""
+    "reviewchannel":"",
+    "suggestionschannel":""
 }
