@@ -19,7 +19,7 @@
   "dependencies": {
     "discord.js": "^11.5.1",
     "fs-readdir-recursive": "^1.1.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "rethinkdbdash": "^2.3.31"
   }
 }
